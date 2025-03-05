@@ -1,0 +1,2 @@
+# generation of building diagrams
+ 
