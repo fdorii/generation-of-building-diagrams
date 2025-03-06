@@ -19,5 +19,5 @@
   <h3>(<a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/training_example.ipynb#scrollTo=r5PM6vOQPISl">ссылка на гайд обучения</a>). В целом обучение прошло нормально, но из-за ограниченных ресурсов для обучения не хватило времени, данных для более корректного обучения.
   <br>
   <br>
-  <b>test_training.ipynb</b> - Использование уже обученной модели.
+  <b>test_training.ipynb</b> - Обученние модели.
 </details>
