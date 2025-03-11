@@ -21,6 +21,7 @@
   <br>
   <br>
   <b>test_lora.ipynb</b> - Использование уже обученной модели.
+  <br>
   <b>courseworkmodel.safetensors</b> - веса обученной модели.
 </details>
 
@@ -30,5 +31,6 @@
   <br>
   <br>
   <b>test_training.ipynb</b> - Обученние модели.
+  <br>
   <b>runs</b> - Логи обучения.
 </details>
