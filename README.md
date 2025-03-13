@@ -17,8 +17,8 @@
 </details>
 
 <details>
-  <summary><h2>⚙️ Попытка 1: Обучение LoRa на Flux</h2></summary>
-  <h3> Для обучения закрытой диффузионной модели Flux использовалось приложение Pinokio (<a href="https://boosty.to/nevskiyart/posts/c37401ab-a5a4-4495-a4f7-d5c272e6433f">ссылка на гайд обучения</a>). В целом обучение прошло нормально, но из-за ограниченных ресурсов для обучения не хватило времени, данных для более корректного обучения.
+  <summary><h2>1️⃣ Попытка 1: Обучение LoRa на Flux</h2></summary>
+  Для обучения закрытой диффузионной модели Flux использовалось приложение Pinokio (<a href="https://boosty.to/nevskiyart/posts/c37401ab-a5a4-4495-a4f7-d5c272e6433f">ссылка на гайд обучения</a>). В целом обучение прошло нормально, но из-за ограниченных ресурсов для обучения не хватило времени, данных для более корректного обучения.
   <br>
   <br>
   <b>test_lora.ipynb</b> - Использование уже обученной модели.
@@ -27,11 +27,22 @@
 </details>
 
 <details>
-  <summary><h2>⚙️ Попытка 2: Обучение UNet2DModel</h2></summary>
-  <h3>(<a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/training_example.ipynb#scrollTo=r5PM6vOQPISl">ссылка на гайд обучения</a>). В целом обучение прошло нормально, но из-за ограниченных ресурсов для обучения не хватило времени, данных для более корректного обучения.
+  <summary><h2>2️⃣ Попытка 2: Обучение UNet2DModel</h2></summary>
+  (<a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/training_example.ipynb#scrollTo=r5PM6vOQPISl">ссылка на гайд обучения</a>). В целом обучение прошло нормально, но из-за ограниченных ресурсов для обучения не хватило времени, данных для более корректного обучения.
   <br>
   <br>
   <b>test_training.ipynb</b> - Обученние модели.
   <br>
   <b>runs</b> - Логи обучения.
+</details>
+
+<details>
+  <summary><h2>3️⃣ Попытка 3: Обучение UNet2DModel на втором этапе обработки данных</h2></summary>
+  Были изменены исходные фотографии во второй раз, добавлено два тега, увеличилось количество эпох, но лучше не стало...
+  (<a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/training_example.ipynb#scrollTo=r5PM6vOQPISl">ссылка на гайд обучения</a>). В целом обучение прошло нормально, но из-за ограниченных ресурсов для обучения не хватило времени, данных для более корректного обучения.
+  <br>
+  <br>
+  <b>test_training_new_data.ipynb</b> - Обученние модели.
+  <!-- <br>
+  <b>runs</b> - Логи обучения. -->
 </details>
