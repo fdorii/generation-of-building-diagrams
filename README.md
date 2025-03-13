@@ -37,7 +37,7 @@
 </details>
 
 <details>
-  <summary><h2>3️⃣ Попытка 3: Обучение UNet2DModel на втором этапе обработки данных</h2></summary>
+  <summary><h2>3️⃣ Попытка 3: Обучение UNet2DModel на новых данных</h2></summary>
   Были изменены исходные фотографии во второй раз, добавлено два тега, увеличилось количество эпох, но лучше не стало...
   (<a href="https://colab.research.google.com/github/huggingface/notebooks/blob/main/diffusers/training_example.ipynb#scrollTo=r5PM6vOQPISl">ссылка на гайд обучения</a>). В целом обучение прошло нормально, но из-за ограниченных ресурсов для обучения не хватило времени, данных для более корректного обучения.
   <br>
