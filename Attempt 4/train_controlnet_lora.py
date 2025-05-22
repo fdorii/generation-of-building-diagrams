@@ -55,10 +55,10 @@ output_dir = "./output"
 image_dir = "./data/images"
 canny_dir = "./data/canny"
 caption_file = "./data/captions.json"
-resolution = 384
-batch_size = 1
+resolution = 524
+batch_size = 5
 epochs = 50
-lr = 1e-5
+lr = 1e-6
 save_every_n_steps = 10
 
 accelerator = Accelerator(mixed_precision="fp16")
@@ -78,7 +78,7 @@ pipe.unet.enable_gradient_checkpointing()
 pipe.scheduler = DDIMScheduler.from_pretrained(pretrained_model, subfolder="scheduler")
 
 # === ✅ Применение LoRA к attention-слоям UNet ===
-rank = 1
+rank = 4
 for name, module in pipe.unet.named_modules():
     if hasattr(module, "set_attn_processor"):
         try:
@@ -91,7 +91,8 @@ print("✅ LoRA адаптеры применены к UNet через diffusers
 # === Обучение ===
 dataset = BuildingDataset(image_dir, canny_dir, caption_file, tokenizer, resolution)
 dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
-optimizer = torch.optim.AdamW(pipe.unet.parameters(), lr=lr)
+# optimizer = torch.optim.AdamW(pipe.unet.parameters(), lr=lr)
+optimizer = torch.optim.AdamW(pipe.unet.attn_processors.parameters(), lr=lr)
 
 vae = pipe.vae
 scheduler = pipe.scheduler
@@ -151,5 +152,5 @@ for epoch in range(epochs):
             print(f"✅ Checkpoint сохранён: {checkpoint_dir}")
 
 # Финальное сохранение
-pipe.unet.save_attn_procs(output_dir)
+pipe.unet.save_attn_processors(output_dir)
 print("✅ Финальные LoRA веса сохранены в:", output_dir)
